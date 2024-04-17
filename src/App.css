@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #3e85f4;
+}
+.container{
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    background-color: white;
+    padding: 12px 0px
+}
+.container h4{
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #0000003b;
+}
+.container .passDiv{
+    padding: 13px 0px;
+    width: 345px;
+    margin-left: 19px;
+    position: relative;
+   
+}
+.container input.passValu{
+   width: 90%;
+   height: 45px;
+   padding: 0px 15px;
+   font-weight: 700;
+   background-color: rgb(255, 255, 255);
+   outline: none;
+   border: 1px solid #0000003b;
+   border-radius: 3px;
+  
+}
+.material-symbols-outlined {
+    position: absolute;
+    right: 45px;
+    top: 23px;
+    width: 19px;
+    color: #000000c7;
+    height: 21px;
+    cursor: pointer;
+   
+}
+.material-symbols-outlined.active{
+    color: #00ec84;
+    width: 23px;
+    height: 22px;
+    pointer-events: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .passDiv .copy:active{
+    color: rgb(55, 0, 255);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container h5 {
+    font-size: 14px;
+    margin-left: 19px;
+    font-weight: 500;
+   
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container h5 label{
+    float: right;
+    margin-right: 24px;
+    font-size: 01rem;
 }
-
-.App-link {
-  color: #61dafb;
+.container .range{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 88%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.555);
+    position: relative;
+   
+    
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .range::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 20%;
+    background-color: red;
+}
+.container #weak::after{
+    background-color: red(255, 0, 191);
+}
+.container #medium::after{
+    background-color:orange;
+    width: 50%;
+}
+.container #strong::after{
+    background-color:rgb(51, 255, 0);
+    width: 100%;
+}
+.container .rangeInput{
+    width: 88%;
+    height: 4px;
+    margin-left: 19px;
+    position: relative;
+   
+}
+.container .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: 14px;
+    font-size: 13px;
+    gap: 10px;
+    margin-top: 10px;
+}
+button{
+    padding: 9px 80px;
+    text-align: center;
+    font-size: 15px;
+    margin: 19px;
+   outline: none;
+   border: none;
+   background-color: #3eb4eb;
+   color: white;
+   cursor: pointer;
+   transition:  .3ms ease;
+}
+button:active{
+    background-color: #80caed;
+}
+.container .options .option{
+    width: 47%;
+}
+.container .options .option input:checked {
+    accent-color: #787ae7;
+}
+.container .options .option label{
+        margin-left:7px;
+}
+@media (min-width: 120px) and ( max-width:354px){
+    .container {
+        width: 314px;
+    }
+    .container input.passValu {
+        width: 80%;
+    }
+    button {
+        padding: 9px 64px;}
+        .material-symbols-outlined {
+            right: 83px;}
 }
